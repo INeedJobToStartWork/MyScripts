@@ -1,13 +1,32 @@
 {
-  "name": "myscripts",
-  "version": "0.0.0",
-  "private": "true",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+	"name": "myscripts",
+	"version": "0.0.0",
+	"private": "true",
+	"description": "",
+	"keywords": [],
+	"license": "MIT",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"format": "pnpm prettier . --write && pnpm prettier . --check",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"lint-staged": {
+		"*": [
+			"pnpm format --",
+			"pnpm lint:fix --",
+			"pnpm lint --"
+		]
+	},
+	"devDependencies": {
+		"@ineedj/eslintrc": "^0.3.1",
+		"@ineedj/prettierrc": "^2.0.0",
+		"@ineedj/tsconfig": "^1.0.0",
+		"eslint": "9.6.0",
+		"prettier": "^3.3.3",
+		"typescript": "^5.5.3"
+	}
 }
