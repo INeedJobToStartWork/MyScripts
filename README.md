@@ -1,1 +1,1 @@
-# MyScripts
+./packages/MyScripts/README.md
