@@ -2,17 +2,34 @@
 	"name": "myscripts",
 	"version": "0.0.0",
 	"private": "true",
-	"description": "",
-	"keywords": [],
+	"description": "Your CLI local script manager",
+	"keywords": [
+		"MyScripts",
+		"Scripts manager",
+		"local script manager",
+		"CLI app"
+	],
+	"homepage": "https://github.com/INeedJobToStartWork/MyScripts",
+	"bugs": "https://github.com/INeedJobToStartWork/MyScripts/issues/new/choose",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/INeedJobToStartWork/MyScripts",
+		"directory": "packages/MyScripts"
+	},
 	"license": "MIT",
-	"author": "",
+	"author": "ineedjobtostartwork",
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
+		"build": "pnpm tsup-node --config ./config/tsuprc/tsup.prod.ts ",
+		"build:npm": "pnpm npm:prepack && pnpm tsup-node --config ./config/tsuprc/tsup.prod.ts && pnpm npm:postpack",
+		"dev": "pnpm tsup-node --config ./config/tsuprc/tsup.dev.ts",
 		"format": "pnpm prettier . --write && pnpm prettier . --check",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"npm:postpack": "clean-package restore",
+		"npm:prepack": "clean-package",
+		"prepublishOnly": "pnpm build:npm"
 	},
 	"lint-staged": {
 		"*": [
@@ -21,12 +38,18 @@
 			"pnpm lint --"
 		]
 	},
+	"dependencies": {
+		"oh-my-error": "1.1.1"
+	},
 	"devDependencies": {
-		"@ineedj/eslintrc": "^0.3.1",
+		"@ineedj/eslintrc": "^0.3.6",
 		"@ineedj/prettierrc": "^2.0.0",
 		"@ineedj/tsconfig": "^1.0.0",
+		"clean-package": "^2.2.0",
+		"esbuild-plugin-copy": "^2.1.1",
 		"eslint": "9.6.0",
 		"prettier": "^3.3.3",
-		"typescript": "^5.5.3"
+		"tsup": "^8.1.0",
+		"typescript": "^5.5.4"
 	}
 }

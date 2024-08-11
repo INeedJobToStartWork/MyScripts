@@ -20,4 +20,4 @@ export default ineedj({
 		toml: false,
 		yaml: false
 	}
-});
+}).removeRules("@typescript-eslint/no-throw-literal");
