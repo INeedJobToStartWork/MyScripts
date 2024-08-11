@@ -25,11 +25,11 @@
     
 <h2>OS Support</h2>
 
-| OS      | Wsparcie       | Ścieżka instalacji |
-| ------- | -------------- | ------------------ |
-| Windows | ❌ (Planowane) | 😴                 |
-| Linux   | ❌ (Planowane) | 😴                 |
-| Mac     | ❌ (Planowane) | 😴                 |
+| OS      | Support      | Installation Path |
+| ------- | ------------ | ----------------- |
+| Windows | ❌ (Planned) | -                 |
+| Linux   | ❌ (Planned) | -                 |
+| Mac     | ❌ (Planned) | -                 |
 
   </td>
   <td>
