@@ -25,11 +25,11 @@
     
 <h2>OS Support</h2>
 
-| OS      | Support      | Installation Path |
-| ------- | ------------ | ----------------- |
-| Windows | ❌ (Planned) | -                 |
-| Linux   | ❌ (Planned) | -                 |
-| Mac     | ❌ (Planned) | -                 |
+| OS      | Support      | Installation Path                                 |
+| ------- | ------------ | ------------------------------------------------- |
+| Windows | ❌ (Planned) | `join(process.env.appdata,".config","MyScripts")` |
+| Linux   | ❌ (Planned) | `join(process.env.HOME,".config","MyScripts")`    |
+| Mac     | ❌ (Planned) | `join(process.env.HOME,".config","MyScripts")`    |
 
   </td>
   <td>
